@@ -19,7 +19,13 @@ public class listagemVIEW extends javax.swing.JFrame {
     public listagemVIEW() {
         initComponents();
         listarProdutos();
+        popularTabela();
     }
+    
+    private void popularTabela() {
+        DefaultTableModel model = Tabelas.consultarProdutos("");
+        listaProdutos.setModel(model);
+    }    
 
     /**
      * This method is called from within the constructor to initialize the form.

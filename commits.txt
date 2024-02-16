@@ -1,0 +1,17 @@
+commit d8c21be822084dc8f95b2071a4793656e5f68c5d
+Author: JvFerreiraLucio <159810060+JvFerreiraLucio@users.noreply.github.com>
+Date:   Thu Feb 15 11:28:40 2024 -0300
+
+    Arquivo de MySQL adicionado
+
+commit d2da33c40916810789c10ae6c2639b5816875db2
+Author: JvFerreiraLucio <159810060+JvFerreiraLucio@users.noreply.github.com>
+Date:   Thu Feb 15 11:21:58 2024 -0300
+
+    Adicionado arquivo README.md
+
+commit 4a07f8a0bce5396002412aa2431fc3c6a4f5d065
+Author: JvFerreiraLucio <159810060+JvFerreiraLucio@users.noreply.github.com>
+Date:   Thu Feb 15 11:05:47 2024 -0300
+
+    Projeto inicial
