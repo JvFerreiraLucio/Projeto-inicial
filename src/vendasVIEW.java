@@ -53,7 +53,6 @@ public class vendasVIEW extends javax.swing.JFrame {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            // Trate qualquer exceção adequadamente
         }
     }
     

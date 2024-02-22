@@ -15,6 +15,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.sql.SQLException;
 import java.sql.DriverManager;
+import javax.swing.table.DefaultTableModel;
 
 
 public class ProdutosDAO {
@@ -43,11 +44,28 @@ public class ProdutosDAO {
         }
     }
     
-    public void listarProdutosVendidos() {
-        
+    public void listarProdutosVendidos(DefaultTableModel model) {
+        try {
+            String query = "SELECT * FROM produtos WHERE status = 'Vendido'";
+            model.setNumRows(0);
+
+            try (Connection connection = DriverManager.getConnection(url, usuarioBanco, senhaBanco);
+                 PreparedStatement preparedStatement = connection.prepareStatement(query);
+                 ResultSet resultSet = preparedStatement.executeQuery()) {
+
+                while (resultSet.next()) {
+                    int id = resultSet.getInt("id");
+                    String nome = resultSet.getString("nome");
+                    String valor = resultSet.getString("valor");
+                    String status = resultSet.getString("status");
+
+                    model.addRow(new Object[]{id, nome, valor, status});
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
-    
-    
     
     
     public void cadastrarProduto (ProdutosDTO produto){
