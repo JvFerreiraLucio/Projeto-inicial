@@ -43,6 +43,13 @@ public class ProdutosDAO {
         }
     }
     
+    public void listarProdutosVendidos() {
+        
+    }
+    
+    
+    
+    
     public void cadastrarProduto (ProdutosDTO produto){
         
         
